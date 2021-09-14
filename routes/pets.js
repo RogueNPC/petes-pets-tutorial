@@ -114,4 +114,9 @@ module.exports = (app) => {
         res.render('pets-index', { pets: results.docs, pagesCount: results.pages, currentPage: page, term: req.query.term });
       });
   });
+
+  // PURCHASE PET
+  app.post('/pets/:id/purchase', (req,res) => {
+    console.log(`purchase body: ${req.body}`);
+  });
 }
